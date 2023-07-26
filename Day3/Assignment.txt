@@ -1,0 +1,1083 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/): Bootcamp
+Bootcamp
+Current Mongosh Log ID: 64c0fac460deebbd808e9e8d
+Connecting to:          mongodb://127.0.0.1:27017/Bootcamp?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1
+Using MongoDB:          6.0.8
+Using Mongosh:          1.10.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-07-26T09:59:03.769+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+Bootcamp> use mongo_practise
+switched to db mongo_practise
+mongo_practise> db.movies.insert({title:"Fight Club", writer: "Chuck Palahniuk", year: "1999", actors:["Brad Pitt", "Edward Norton"]})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64c0fae660deebbd808e9e8e") }
+}
+mongo_practise> db.movies.insert({title:"Pulp Fiction", writer:"Quentin Tarantino", year:"2009", actors:["John Travolta", "Uma Thurman"]})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64c0faf460deebbd808e9e8f") }
+}
+mongo_practise> db.movies.insert({title:"Inglorious Basterds", writer:"Quentin Tarantino", year:"2009", actors:["Brad Pitt", "Diane Kruger", "Eli Roth"]})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64c0fb0060deebbd808e9e90") }
+}
+mongo_practise> db.movies.insert({title:"The Hobbit: An unexpected Journey", writer:"J.R.R. Tolkein", year:"2012",franchise:"The Hobbit"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64c0fb1460deebbd808e9e91") }
+}
+mongo_practise> db.movies.insert({title:"The Hobbit: The Desolation of Smaug", writer:"J.R.R Tolkien", year:"2013", franchise:"The Hobbit"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64c0fb2260deebbd808e9e92") }
+}
+mongo_practise> db.movies.insert({title:"The Hobbit: The Battle of the Five Armies", writer:"J.R.R Tolkien", year:"2002", franchise:"The Hobbit", synopsis:"Bilbo and Comongo_practise> db.movies.find()
+[ypeError: db.movies.fin is not a function
+  {cknowledged: true,
+    _id: ObjectId("64c0f950074938eb5ec1130b"),bd808e9e94") }
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',',
+    writer: 'Chuck Palahniuk',',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ] ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',asterds',
+    writer: 'Chuck Palahniuk',',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.find({writer:"Quetin Tarantino"})
+
+mongo_practise> db.movies.find({writer:"Quentin Tarantino"})
+[
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  }
+]
+mongo_practise> db.movies.find({movies:"Brad Pitt"})
+
+mongo_practise> db.movies.find({actors:"Brad Pitt"})
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  }
+]
+mongo_practise> db.movies.find({frachise:"The Ho"})
+
+mongo_practise> db.movies.find({frachise:"The Hobbit"})
+
+mongo_practise> db.movies.find({year:{$gt:"1990",$lt:"2000"}})
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  }
+]
+mongo_practise> db.movies.find({$or:[{year:{$gt:"2010"}},{year:{$lt:"2000"}}]})
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  }
+]
+mongo_practise> db.movies.update({{_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+Uncaught:
+SyntaxError: Unexpected token (1:18)
+
+> 1 | db.movies.update({{_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+    |                   ^
+  2 |
+
+mongo_practise> db.movies.update({{_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+Uncaught:
+SyntaxError: Unexpected token (1:18)
+
+> 1 | db.movies.update({{_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+    |                   ^
+  2 |
+
+mongo_practise> db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.update({_id:ObjectId("5c9fa42ae5c2dfe9b3729c03")}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.update({_id:ObjectId("5c9f983ce5c2dfe9b3729bfc")}, {$push:{actors:"Samuel L. Jackson"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find(title:"The Hobbit: The Battle of the Five Armies")
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:20)
+
+> 1 | db.movies.find(title:"The Hobbit: The Battle of the Five Armies")
+    |                     ^
+  2 |
+
+mongo_practise> db.movies.find({title:'The Hobbit: The Battle of the Five Armies'})
+[
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  }
+]
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise>
+
+mongo_practise> db.movies.update({_id:ObjectId("5c9f983ce5c2dfe9b3729bfc")}, {$push:{actors:"Samuel L. Jackson"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise>
+
+mongo_practise> db.movies.find({synopsis:{$regex:"Bilbo"}})
+[
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  }
+]
+mongo_practise> db.movies.find({synopsis:{$regex:"Gandalf"}})
+
+mongo_practise> db.movies.find({synopsis:{$regex:"Gandalf"}})
+
+mongo_practise> db.movies.find({snopsis:{$regex:"Gandalf"}})
+
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise>
+
+mongo_practise> db.movies.find({$and:[{synopsis:{$regex:"Bilbo"},{synopsis:{$regex:"Gandalf"}}}]})
+Uncaught:
+SyntaxError: Unexpected token (1:49)
+
+> 1 | db.movies.find({$and:[{synopsis:{$regex:"Bilbo"},{synopsis:{$regex:"Gandalf"}}}]})
+    |                                                  ^
+  2 |
+
+mongo_practise> db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}},{synopsis:{$regex:"Gandalf"}}}]})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:79)
+
+> 1 | db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}},{synopsis:{$regex:"Gandalf"}}}]})
+    |                                                                                ^
+  2 |
+
+mongo_practise> db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}},{synopsis:{$regex:"Gandalf"}}]})
+
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"Bilbo"}},{synopsis:{$regex:"Gandalf"}}]})
+[
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  }
+]
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"dwarves"}},{synopsis:{$regex:"dobbit"}}]})
+
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"dwarves"}},{synopsis:{$regex:"hobbit"}}]})
+
+mongo_practise> db.movies.update({_id:ObjectId("5c9fa42ae5c2dfe9b3729c03")}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.find({title:"The Hobbit: The Desolation of Smaug"})
+[
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  }
+]
+mongo_practise> db.movies.update({_id:ObjectId("5c9fa42ae5c2dfe9b3729c03")}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find({title:"The Hobbit: The Desolation of Smaug"})
+[
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit'
+  }
+]
+mongo_practise> db.movies.update({title:"The Hobbit: The Desolation of Smaug"}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})
+{ {
+  acknowledged: true,c0fb2260deebbd808e9e92"),
+  insertedId: null,bit: The Desolation of Smaug',
+  matchedCount: 1, Tolkien',
+  modifiedCount: 1,
+  upsertedCount: 0e Hobbit'
+} }
+mongo_practise> db.movies.find({title:"The Hobbit: The Desolation of Smaug"})
+[
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit',
+    synopsis: 'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'
+  }
+]
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"dwarves"}}, {synopsis:{$regex:"hobbit"}}]})
+[
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit',
+    synopsis: 'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'
+  }
+]
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"gold"}}, {synopsis:{$regex:"dragon"}}]})
+
+mongo_practise> db.movies.find({$and:[{synopsis:{$regex:"gold"}}, {synopsis:{$regex:"dragon"}}]})
+
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit',
+    synopsis: 'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.find({$or:[{synopsis:{$regex:"gold"}}, {synopsis:{$regex:"dragon"}}]})
+
+mongo_practise> db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit',
+    synopsis: 'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home and the gold within it from the dragon Smaug."}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+mongo_practise> db.movies.find()
+[
+  {
+    _id: ObjectId("64c0f950074938eb5ec1130b"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0f95d074938eb5ec1130c"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fae660deebbd808e9e8e"),
+    title: 'Fight Club',
+    writer: 'Chuck Palahniuk',
+    year: '1999',
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId("64c0faf460deebbd808e9e8f"),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId("64c0fb0060deebbd808e9e90"),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: '2009',
+    actors: [ 'Brad Pitt', 'Diane Kruger', 'Eli Roth' ]
+  },
+  {
+    _id: ObjectId("64c0fb1460deebbd808e9e91"),
+    title: 'The Hobbit: An unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: '2012',
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId("64c0fb2260deebbd808e9e92"),
+    title: 'The Hobbit: The Desolation of Smaug',
+    writer: 'J.R.R Tolkien',
+    year: '2013',
+    franchise: 'The Hobbit',
+    synopsis: 'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'
+  },
+  {
+    _id: ObjectId("64c0fb3f60deebbd808e9e93"),
+    title: 'The Hobbit: The Battle of the Five Armies',
+    writer: 'J.R.R Tolkien',
+    year: '2002',
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  },
+  {
+    _id: ObjectId("64c0fb5660deebbd808e9e94"),
+    title: "Pee Wee Herman's Big Adventures"
+  }
+]
+mongo_practise> db.movies.remove({title:"Pee Wee Herman's Big Adventure"})
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 0 }
+mongo_practise> db.movies.deleteOne({title:"Pee Wee Herman's Big Adventure"})
+{ acknowledged: true, deletedCount: 0 }
+mongo_practise> db.movies.remove({_id:ObjectId("5c9f992ae5c2dfe9b3729c00")})
+{ acknowledged: true, deletedCount: 0 }
+mongo_practise> db.movies.remove({_id:ObjectId("5c9f9936e5c2dfe9b3729c01")})
+{ acknowledged: true, deletedCount: 0 }
+mongo_practise>
