@@ -600,6 +600,251 @@ Bootcamp>  {$and: [{ price:{$gte: 800 }}, { releaseDate: { $gte: ISODate("2011-0
 ]
 Bootcamp>
 
+Bootcamp> db.phone.insertOne({_id:1,name:"iphone",contact:[123,456]})
+{ acknowledged: true, insertedId: 1 }
+Bootcamp> db.phone.insertOne({_id:2,name:"j7",contact:[123,456,789]})
+{ acknowledged: true, insertedId: 2 }
+Bootcamp> db.phone.insertOne({_id:3,name:"sony",contact:[123,455]})
+{ acknowledged: true, insertedId: 3 }
+Bootcamp> db.phone.insertOne({_id:4,name:"nokia",contact:[123,455,897]})
+{ acknowledged: true, insertedId: 4 }
+Bootcamp> db.phone.insertOne({_id:5,name:"oneplus",contact:[123,423]})
+{ acknowledged: true, insertedId: 5 }
+Bootcamp> db.phone.find()
+[
+  { _id: 1, name: 'iphone', contact: [ 123, 456 ] },
+  { _id: 2, name: 'j7', contact: [ 123, 456, 789 ] },
+  { _id: 3, name: 'sony', contact: [ 123, 455 ] },
+  { _id: 4, name: 'nokia', contact: [ 123, 455, 897 ] },
+  { _id: 5, name: 'oneplus', contact: [ 123, 423 ] }
+]
+Bootcamp> db.phone.find({contact:{$size:4}}
+...
+... db.phone.find({contact:{$size:4}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (3:0)
+
+  1 | db.phone.find({contact:{$size:4}}
+  2 |
+> 3 | db.phone.find({contact:{$size:4}})
+    | ^
+  4 |
+
+Bootcamp> db.phone.find({contact:{$size:4}})
+
+Bootcamp> db.phone.find({contact:{$size:3}})
+[
+  { _id: 2, name: 'j7', contact: [ 123, 456, 789 ] },
+  { _id: 4, name: 'nokia', contact: [ 123, 455, 897 ] }
+]
+Bootcamp> db.phone.find({contact:{$size:2}})
+[
+  { _id: 1, name: 'iphone', contact: [ 123, 456 ] },
+  { _id: 3, name: 'sony', contact: [ 123, 455 ] },
+  { _id: 5, name: 'oneplus', contact: [ 123, 423 ] }
+]
+Bootcamp> db.phone.find({contact:{$eleMatch:${111}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:35)
+
+> 1 | db.phone.find({contact:{$eleMatch:${111}})
+    |                                    ^
+  2 |
+
+Bootcamp> db.phone.find({contact:{$eleMatch:{111}}})
+Uncaught:
+SyntaxError: Unexpected token (1:38)
+
+> 1 | db.phone.find({contact:{$eleMatch:{111}}})
+    |                                       ^
+  2 |
+
+Bootcamp> db.phone.find({contact:{$eleMatch:111}})
+MongoServerError: unknown operator: $eleMatch
+Bootcamp> db.phone.find()
+[
+  { _id: 1, name: 'iphone', contact: [ 123, 456 ] },
+  { _id: 2, name: 'j7', contact: [ 123, 456, 789 ] },
+  { _id: 3, name: 'sony', contact: [ 123, 455 ] },
+  { _id: 4, name: 'nokia', contact: [ 123, 455, 897 ] },
+  { _id: 5, name: 'oneplus', contact: [ 123, 423 ] }
+]
+Bootcamp> db.phone.updateMany({},{$rename:{phone_name:"name"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  { _id: 1, name: 'iphone', contact: [ 123, 456 ] },
+  { _id: 2, name: 'j7', contact: [ 123, 456, 789 ] },
+  { _id: 3, name: 'sony', contact: [ 123, 455 ] },
+  { _id: 4, name: 'nokia', contact: [ 123, 455, 897 ] },
+  { _id: 5, name: 'oneplus', contact: [ 123, 423 ] }
+]
+Bootcamp> db.phone.updateMany({},{$rename:{name:"phone_name"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  { _id: 1, contact: [ 123, 456 ], phone_name: 'iphone' },
+  { _id: 2, contact: [ 123, 456, 789 ], phone_name: 'j7' },
+  { _id: 3, contact: [ 123, 455 ], phone_name: 'sony' },
+  { _id: 4, contact: [ 123, 455, 897 ], phone_name: 'nokia' },
+  { _id: 5, contact: [ 123, 423 ], phone_name: 'oneplus' }
+]
+Bootcamp> db.phone.updateMany({},{$rename:{contact:"contact_no"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  { _id: 1, phone_name: 'iphone', contact_no: [ 123, 456 ] },
+  { _id: 2, phone_name: 'j7', contact_no: [ 123, 456, 789 ] },
+  { _id: 3, phone_name: 'sony', contact_no: [ 123, 455 ] },
+  { _id: 4, phone_name: 'nokia', contact_no: [ 123, 455, 897 ] },
+  { _id: 5, phone_name: 'oneplus', contact_no: [ 123, 423 ] }
+]
+Bootcamp> db.phone.updateMany({},{$set:{price:400}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  {
+    _id: 1,
+    phone_name: 'iphone',
+    contact_no: [ 123, 456 ],
+    price: 400
+  },
+  {
+    _id: 2,
+    phone_name: 'j7',
+    contact_no: [ 123, 456, 789 ],
+    price: 400
+  },
+  { _id: 3, phone_name: 'sony', contact_no: [ 123, 455 ], price: 400 },
+  {
+    _id: 4,
+    phone_name: 'nokia',
+    contact_no: [ 123, 455, 897 ],
+    price: 400
+  },
+  {
+    _id: 5,
+    phone_name: 'oneplus',
+    contact_no: [ 123, 423 ],
+    price: 400
+  }
+]
+Bootcamp> db.phone.updateMany({_id:2},{$set:{price:200}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.updateMany({_id:2},{$set:{price:200}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  {
+    _id: 1,
+    phone_name: 'iphone',
+    contact_no: [ 123, 456 ],
+    price: 400
+  },
+  {
+    _id: 2,
+    phone_name: 'j7',
+    contact_no: [ 123, 456, 789 ],
+    price: 200
+  },
+  { _id: 3, phone_name: 'sony', contact_no: [ 123, 455 ], price: 400 },
+  {
+    _id: 4,
+    phone_name: 'nokia',
+    contact_no: [ 123, 455, 897 ],
+    price: 400
+  },
+Bootcamp> db.phone.updateMany({},{$unset:{price:}""})
+Uncaught:5,
+SyntaxError: Unexpected token (1:38)
+    contact_no: [ 123, 423 ],
+> 1 | db.phone.updateMany({},{$unset:{price:}""})
+    |                                       ^
+  2 |
+Bootcamp>
+Bootcamp> db.phone.updateMany({},{$unset:{price:""}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+Bootcamp> db.phone.find()
+[
+  { _id: 1, phone_name: 'iphone', contact_no: [ 123, 456 ] },
+  { _id: 2, phone_name: 'j7', contact_no: [ 123, 456, 789 ] },
+  { _id: 3, phone_name: 'sony', contact_no: [ 123, 455 ] },
+  { _id: 4, phone_name: 'nokia', contact_no: [ 123, 455, 897 ] },
+  { _id: 5, phone_name: 'oneplus', contact_no: [ 123, 423 ] }
+]
+Bootcamp> db.employee.find()
+[
+  {
+    _id: ObjectId("64c0a139c92912c8bd8ab244"),
+    name: 'aniket',
+    department: 'GNT',
+    age: 22
+  },
+  { _id: ObjectId("64c0a19cc92912c8bd8ab245"), phone: '1234567890' },
+  {
+    _id: ObjectId("64c0a25f8d0e4ea5553f06cc"),
+    name: 'mahadik',
+    age: 22
+  },
+  { _id: ObjectId("64c0a2738d0e4ea5553f06cd"), name: 'Neha', age: 25 },
+  {
+    _id: ObjectId("64c0a3f38d0e4ea5553f06ce"),
+    name: 'safan',
+    age: '30',
+    profession: 'coorporate trainer'
+  },
+  {
+    _id: ObjectId("64c0a3f38d0e4ea5553f06cf"),
+    name: 'sridhar',
+    age: '30',
+    profession: 'Maneger'
+  },
+  { _id: ObjectId("64c0a3f38d0e4ea5553f06d0"), name: 'notch' }
+]
+Bootcamp>
+
 
 
 
